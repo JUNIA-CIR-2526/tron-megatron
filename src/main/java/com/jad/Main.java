@@ -2,15 +2,14 @@ package com.jad;
 
 import com.jad.textwindow.TextWindow;
 import com.jad.textwindow.TextWindowSettings;
-
-import java.awt.*;
 import java.awt.event.KeyEvent;
 
 public enum Main {
     ;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         TextWindowSettings settings = new TextWindowSettings();
+
         settings.addKeyboardListener(KeyEvent.VK_ESCAPE, "exit");
         /* touches du joueur 1 */
         settings.addKeyboardListener(KeyEvent.VK_Q, "player1_left");
@@ -30,6 +29,9 @@ public enum Main {
         while (textWindow.isOff("exit")) {
             textWindow.display("YOULOU");
         }
-        textWindow.close();
+
+        tw.display("GAME OVER !");
+        Thread.sleep(2000);
+        tw.close();
     }
 }
