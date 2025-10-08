@@ -2,7 +2,10 @@ package com.jad;
 
 import com.jad.textwindow.TextWindow;
 import com.jad.textwindow.TextWindowSettings;
+
+import java.awt.*;
 import java.awt.event.KeyEvent;
+
 
 public enum Main {
     ;
@@ -30,8 +33,8 @@ public enum Main {
             textWindow.display("YOULOU");
         }
 
-        tw.display("GAME OVER !");
+        textWindow.display("GAME OVER !");
         Thread.sleep(2000);
-        tw.close();
+        textWindow.close();
     }
 }
