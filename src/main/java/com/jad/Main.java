@@ -28,8 +28,7 @@ public enum Main {
 
         Point lastMousePosition;
         while (textWindow.isOff("exit")) {
-            if (textWindow.isOn("player2_up")) textWindow.display("YOULOU");
-            if (textWindow.isOff("player2_up")) textWindow.display("Yagoulou");
+            textWindow.display("YOULOU");
         }
         textWindow.close();
     }
